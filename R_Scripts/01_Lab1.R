@@ -17,6 +17,10 @@ dat <- read.csv(here("data", "Lab1data.csv"))
 
 plot(dat$length_mm, dat$mass_g)
 
-ggplot(dat, aes(x= length_mm, y = mass_g)) +
+LW.pl <- ggplot(dat, aes(x= length_mm, y = mass_g)) +
   geom_point(color = "blue") +
   ylab("body mass (g)")
+
+dir.create("plots")
+
+ggsave(LW.pl, path = here("plots"), file = "length_weight_scatter.pdf", width = 10, height = 8, units = "in")
