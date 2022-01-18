@@ -5,6 +5,7 @@
 
 
 library(here)
+library(moments)
 
 ### Density functions (d) ###
 ## returns density (height) of probability distribution at specified value. 
@@ -97,3 +98,12 @@ aa <- data.frame(cbind(matrix(a), matrix(a)))
 ggplot(aa, aes(x = X1)) + 
   geom_histogram(binwidth = 5)
 
+### Skew & kurtosis ###
+## using "moments" package
+b <- rnorm(30, mean = 10, sd = 1)
+skewness(b)
+kurtosis(b)
+
+d <- rpois(30, lambda = 10)
+skewness(d)
+kurtosis(d)
