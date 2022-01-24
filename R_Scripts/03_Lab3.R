@@ -9,14 +9,30 @@ library(boot)
 library(coin)
 
 ## Bootstrapped 95% confidence interval using the boot package ##
+# Use to bootstrap a confidence interval about any statistic (even those lacking a theoretical distribution)
 # Cook some data
 rdat <- rpois(100, 8)
 
-# Define a function to calculate the statistic of interest (here, median)
+# Define a function to calculate the statistic of interest (example: median)
 med = function(rdat, i){median(rdat[i])}
 
 # Apply the boot.ci function to resample the data 1000 times, and produce estimates of 95% CI from the resampled distribution
-boot.ci(boot(rdat, med, R=1000))
+rdat.CI <- boot.ci(boot(rdat, med, R = 1000))
+
+# An approach for plotting your bootstrapped confidence intervals using ggplot2 #
+
+
+# Extract normal CI from boot.ci object
+lower.CI <- rdat.CI$normal[,2]
+upper.CI <- rdat.CI$normal[,3]
+mdn <- median(rdat)
+
+# Convert random vector to dataframe for plotting
+rdat.df <- data.frame(var = rdat)
+
+CI.pl <- rdat.df %>% ggplot(aes(y = mdn, x = 1)) +
+geom_point(size = 10) +
+geom_errorbar(aes(ymin = lower.CI, ymax = upper.CI), width = 0.1, size = 0.5)
 
 ## Permutation t-test (2 sample), "by hand" ##
 # Import data
