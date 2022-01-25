@@ -20,8 +20,6 @@ med = function(rdat, i){median(rdat[i])}
 rdat.CI <- boot.ci(boot(rdat, med, R = 1000))
 
 # An approach for plotting your bootstrapped confidence intervals using ggplot2 #
-
-
 # Extract normal CI from boot.ci object
 lower.CI <- rdat.CI$normal[,2]
 upper.CI <- rdat.CI$normal[,3]
@@ -76,3 +74,16 @@ mean(abs(mn.diff) >= abs(mn.diff[1]))
 fox.long <- foxdata %>% pivot_longer(c(fox, no.fox), values_to = "NPP", names_to = "cat")
 
 oneway_test(fox.long$NPP ~ as.factor(fox.long$cat), alternative="two.sided", distribution = approximate(nresample = 5000))
+
+## F test of equal variance between two groups ##
+# Calculate ratio of variances of the two groups
+Fvar <- var(foxdata$no.fox)/var(foxdata$fox)
+
+# Compare ratio to the F-distribution. 
+# Null hypothesis: ratio is equal to 1
+2*pf(Fvar, length(foxdata$no.fox)-1, length(foxdata$fox)-1)
+# P-value is >> 0.05. Fail to reject the null. Variances are equal.
+
+# Same test, using var.test function
+var.test(NPP ~ cat, fox.long, 
+         alternative = "two.sided")

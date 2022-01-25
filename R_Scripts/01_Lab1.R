@@ -24,3 +24,4 @@ LW.pl <- ggplot(dat, aes(x= length_mm, y = mass_g)) +
 dir.create("plots")
 
 ggsave(LW.pl, path = here("plots"), file = "length_weight_scatter.pdf", width = 10, height = 8, units = "in")
+
