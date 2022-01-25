@@ -32,6 +32,7 @@ CI.pl <- rdat.df %>% ggplot(aes(y = mdn, x = 1)) +
 geom_point(size = 10) +
 geom_errorbar(aes(ymin = lower.CI, ymax = upper.CI), width = 0.1, size = 0.5)
 
+##############################################
 ## Permutation t-test (2 sample), "by hand" ##
 # Import data
 foxdata <- read.csv(here("data", "Lect4_foxdata.csv"))
@@ -69,14 +70,38 @@ abline(v = mn.diff[1], col="red", lwd=5)
 # Note use of absolute values here. This yields the probability for a 2-tailed test (i.e., probability of observing a mean differences greater than or less than the observed).
 mean(abs(mn.diff) >= abs(mn.diff[1]))
 
-## Use functions in the coin package to carry out permutation tests ##
+## A different approach to the "by-hand" calculation of a 2-sample permutation test for Kristen (no for loop!) ##
 # Restructure the data into two columns: one for categories and one for NPP (response variable)
 fox.long <- foxdata %>% pivot_longer(c(fox, no.fox), values_to = "NPP", names_to = "cat")
 
+#"by-hand" method of calculating resampled t-test
+#calculate difference between observed means
+
+diff.fox <- mean(foxdata$no.fox) - mean(foxdata$fox)
+
+#function to carry out single permutation
+perms <- function(){
+  permsamps <- sample(fox.long$NPP, replace=TRUE) # random sample of the data
+  tapply(permsamps, fox.long$cat, mean) -> grps # assign the random samples to one of two categories and take the mean of each
+  grps[1] - grps[2] # difference in means between the two groups
+}
+
+#iterate the permutation
+diffs <- replicate(5000, perms()) # Carry out the perms function 5000 and save the result of each iteration
+
+#combine true diff with permuted diffs
+alldiffs <- c(diffs, diff.fox)
+
+#two-tailed test
+2*sum(alldiffs >= diff.fox)/length(diffs) # Proportion of permutations with a difference in means greater than observed
+
+######################################################################
+## Use functions in the coin package to carry out permutation tests ##
 oneway_test(fox.long$NPP ~ as.factor(fox.long$cat), alternative="two.sided", distribution = approximate(nresample = 5000))
 
 # Option for exact P-value. This will take awhile...
 oneway_test(fox.long$NPP ~ as.factor(fox.long$cat), alternative="two.sided", distribution = "exact")
+######################################################################
 
 ## F test of equal variance between two groups ##
 # Note that this test assumes that observations are normally distributed.
