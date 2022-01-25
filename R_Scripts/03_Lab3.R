@@ -75,7 +75,11 @@ fox.long <- foxdata %>% pivot_longer(c(fox, no.fox), values_to = "NPP", names_to
 
 oneway_test(fox.long$NPP ~ as.factor(fox.long$cat), alternative="two.sided", distribution = approximate(nresample = 5000))
 
+# Option for exact P-value. This will take awhile...
+oneway_test(fox.long$NPP ~ as.factor(fox.long$cat), alternative="two.sided", distribution = "exact")
+
 ## F test of equal variance between two groups ##
+# Note that this test assumes that observations are normally distributed.
 # Calculate ratio of variances of the two groups
 Fvar <- var(foxdata$no.fox)/var(foxdata$fox)
 
