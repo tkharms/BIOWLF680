@@ -116,3 +116,12 @@ Fvar <- var(foxdata$no.fox)/var(foxdata$fox)
 # Same test, using var.test function
 var.test(NPP ~ cat, fox.long, 
          alternative = "two.sided")
+
+####################################################################
+## Tidyverse approach to summarizing data
+# Example: medians by group
+# group_by allows all subsequent operations to be performed within the groups specified in the call to group_by
+# Here we group by the treatment categories
+# Next we use the summarize function to calculate median NPP within each of the two groups
+NPP.md <- fox.long %>% group_by(cat) %>%
+  summarize(across(.cols = NPP, ~median(.x)))
