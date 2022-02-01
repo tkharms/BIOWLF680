@@ -47,6 +47,7 @@ plot(mod.lm)
 
 ## Post-hoc comparisons
 # Tukey's HSD
+# Note the TukeyHSD function requires an aov object (will not accept lm)
 TukeyHSD(mod.aov, "treat")
 
 # Bonferroni
