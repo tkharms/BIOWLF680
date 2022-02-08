@@ -47,6 +47,12 @@ TukeyHSD(mod.int)
 
 ## Generate letters for display on figures
 # Requires emmeans and multcomp packages. 
+
+# Interaction effect
 inter.ph <- emmeans(mod.int, pairwise ~ tw_int, adjust = "tukey")
+inter.ph.lett <- cld(inter.ph$contrasts, Letter = "abcdefg")
+
+# Main effect
+inter.ph <- emmeans(mod1.aov, pairwise ~ nitrogentreat, adjust = "tukey")
 inter.ph.lett <- cld(inter.ph$contrasts, Letter = "abcdefg")
 
