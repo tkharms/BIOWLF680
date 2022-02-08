@@ -40,21 +40,13 @@ TukeyHSD(mod1.aov)
 tw_int <- with(dat, interaction(nitrogentreat, fungitreat))
 
 # Re-run model specifying the interaction term
-mod.int <- aov(NBI~tw_int, data = dat)
+mod.int <- aov(NBI ~ tw_int, data = dat)
 
 # Call Tukey's HSD on the model that explicitly specifies the interaction term
 TukeyHSD(mod.int)
 
 ## Generate letters for display on figures
 # Requires emmeans and multcomp packages. 
-inter.ph <- emmeans(mod.int, "tw_int")
-inter.ph.lett <- cld(inter.ph, Letter = "abcdefg")
+inter.ph <- emmeans(mod.int, pairwise ~ tw_int, adjust = "tukey")
+inter.ph.lett <- cld(inter.ph$contrasts, Letter = "abcdefg")
 
-# Plot
-dw.pl <- ggplot(data = inter.ph.lett, aes(x = tw_int, y = emmean)) +
-  geom_errorbar(aes(ymin = lower.CL, 
-                    ymax = upper.CL), 
-                width = 0.2) +
-  geom_point() +
-  geom_text(aes(label = gsub(" ", "", .group)),
-            position = position_nudge(x = 0.2))
