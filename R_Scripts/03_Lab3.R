@@ -118,6 +118,11 @@ var.test(NPP ~ cat, fox.long,
          alternative = "two.sided")
 
 ####################################################################
+### For paired (or randomized block) designs, specify a variable that describes the pairing or blocks
+# oneway_test(resp ~ pred|ID, data = dat)
+
+
+####################################################################
 ## Tidyverse approach to summarizing data
 # Example: medians by group
 # group_by allows all subsequent operations to be performed within the groups specified in the call to group_by
