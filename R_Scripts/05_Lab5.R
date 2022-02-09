@@ -5,6 +5,7 @@ library(here)
 library(MASS)
 library(emmeans)
 library(multcomp)
+library(agricolae)
 
 ### Read in data ###
 dat <- read.csv(here("data", "Lect08 data.csv"), header=TRUE)
