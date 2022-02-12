@@ -1,0 +1,391 @@
+﻿Year,Polygon,Polygon_type,Transect,num_groups,num_winter_groups,num_summer_groups,Unknown_groups,Date
+2017,2015-F9,Treated,1,0,0,0,0,6/16/17
+2017,2015-F18,Treated,2,0,0,0,0,6/16/17
+2017,2015-F3,Treated,3,0,0,0,0,6/1/17
+2017,2015-F4,Treated,4,0,0,0,0,6/16/17
+2017,2015-F5,Treated,5,0,0,0,0,6/16/17
+2017,2015-F7,Treated,6,0,0,0,0,6/13/17
+2017,2015-F10,Treated,7,0,0,0,0,6/13/17
+2017,2015-F12,Treated,8,0,0,0,0,6/9/17
+2017,2015-S3,Treated,9,1,1,0,0,6/15/17
+2017,2015-F9,Treated,14,0,0,0,0,6/16/17
+2017,2015-F18,Treated,15,0,0,0,0,6/16/17
+2017,2015-F3,Treated,16,0,0,0,0,6/1/17
+2017,2015-F4,Treated,17,0,0,0,0,6/16/17
+2017,2015-F5,Treated,18,0,0,0,0,6/16/17
+2017,2015-F7,Treated,19,2,2,0,0,6/1/17
+2017,2015-F20,Treated,20,0,0,0,0,6/13/17
+2017,2015-F12,Treated,21,0,0,0,0,6/9/17
+2017,2015-S3,Treated,22,1,1,0,0,6/8/17
+2018,2015-F9,Treated,1,0,0,0,0,6/5/18
+2018,2015-F18,Treated,2,0,0,0,0,6/5/18
+2018,2015-F3,Treated,3,0,0,0,0,5/10/18
+2018,2015-F4,Treated,4,0,0,0,0,5/10/18
+2018,2015-F5,Treated,5,3,3,0,0,5/10/18
+2018,2015-F7,Treated,6,1,1,0,0,5/11/18
+2018,2015-F10,Treated,7,0,0,0,0,5/11/18
+2018,2015-F12,Treated,8,0,0,0,0,6/7/18
+2018,2015-S3,Treated,9,0,0,0,0,5/10/18
+2018,2015-F9,Treated,10,0,0,0,0,6/5/18
+2018,2015-F18,Treated,11,0,0,0,0,6/5/18
+2018,2015-F3,Treated,12,1,1,0,0,5/10/18
+2018,2015-F7,Treated,13,1,1,0,0,5/11/18
+2018,2015-F9,Treated,14,0,0,0,0,6/5/18
+2018,2015-F18,Treated,15,0,0,0,0,6/5/18
+2018,2015-F3,Treated,16,0,0,0,0,5/10/18
+2018,2015-F4,Treated,17,1,0,1,0,5/10/18
+2018,2015-F5,Treated,18,0,0,0,0,5/10/18
+2018,2015-F7,Treated,19,0,0,0,0,5/11/18
+2018,2015-F20,Treated,20,0,0,0,0,5/11/18
+2018,2015-F12,Treated,21,0,0,0,0,6/7/18
+2018,2015-S3,Treated,22,1,1,0,0,5/8/18
+2018,2015-F12,Treated,23,0,0,0,0,6/7/18
+2018,2016-2,Treated,24,0,0,0,0,5/7/18
+2018,2016-2,Treated,25,1,1,0,0,5/7/18
+2018,2015-S3,Treated,26,0,0,0,0,5/8/18
+2018,2015-S3,Treated,27,0,0,0,0,5/4/18
+2018,2016-6,Treated,28,0,0,0,0,6/7/18
+2018,2016-6,Treated,29,0,0,0,0,6/7/18
+2018,2016-6,Treated,30,0,0,0,0,6/7/18
+2019,2015-F9,Treated,1,0,0,0,0,5/6/19
+2019,2015-F18,Treated,2,0,0,0,0,5/6/19
+2019,2015-F3,Treated,3,0,0,0,0,5/7/19
+2019,2015-F4,Treated,4,0,0,0,0,5/7/19
+2019,2015-F5,Treated,5,0,0,0,0,5/7/19
+2019,2015-F7,Treated,6,2,1,1,0,5/7/19
+2019,2015-F10,Treated,7,2,2,0,0,5/6/19
+2019,2015-F12,Treated,8,1,0,1,0,5/6/19
+2019,2015-S3,Treated,9,1,1,0,0,5/6/19
+2019,2015-F9,Treated,10,0,0,0,0,5/6/19
+2019,2015-F18,Treated,11,0,0,0,0,5/6/19
+2019,2015-F3,Treated,12,0,0,0,0,5/7/19
+2019,2015-F7,Treated,13,1,1,0,0,5/7/19
+2019,2015-F9,Treated,14,0,0,0,0,5/6/19
+2019,2015-F18,Treated,15,0,0,0,0,5/6/19
+2019,2015-F3,Treated,16,0,0,0,0,5/7/19
+2019,2015-F4,Treated,17,0,0,0,0,5/7/19
+2019,2015-F5,Treated,18,2,2,0,0,5/7/19
+2019,2015-F7,Treated,19,1,1,0,0,5/7/19
+2019,2015-F20,Treated,20,0,0,0,0,5/6/19
+2019,2015-F12,Treated,21,1,1,0,0,5/6/19
+2019,2015-S3,Treated,22,0,0,0,0,5/6/19
+2019,2015-F12,Treated,23,2,1,1,0,5/6/19
+2019,2016-2,Treated,24,5,3,2,0,5/8/19
+2019,2016-2,Treated,25,1,1,0,0,5/8/19
+2019,2015-S3,Treated,26,0,0,0,0,5/6/19
+2019,2015-S3,Treated,27,0,0,0,0,5/6/19
+2019,2016-6,Treated,28,1,1,0,0,5/6/19
+2019,2016-6,Treated,29,1,0,1,0,5/6/19
+2019,2016-6,Treated,30,0,0,0,0,5/6/19
+2020,2015-F9,Treated,1,0,0,0,0,6/9/20
+2020,2015-F18,Treated,2,0,0,0,0,6/9/20
+2020,2015-F3,Treated,3,0,0,0,0,6/11/20
+2020,2015-F4,Treated,4,0,0,0,0,6/9/20
+2020,2015-F5,Treated,5,0,0,0,0,6/9/20
+2020,2015-F7,Treated,6,3,1,2,0,6/10/20
+2020,2015-F10,Treated,7,0,0,0,0,6/11/20
+2020,2015-F12,Treated,8,2,1,1,0,6/10/20
+2020,2015-S3,Treated,9,1,1,0,0,6/8/20
+2020,2015-F9,Treated,10,2,2,0,0,6/9/20
+2020,2015-F18,Treated,11,0,0,0,0,6/9/20
+2020,2015-F3,Treated,12,0,0,0,0,6/11/20
+2020,2015-F7,Treated,13,3,0,3,0,6/10/20
+2020,2015-F9,Treated,14,0,0,0,0,6/9/20
+2020,2015-F18,Treated,15,0,0,0,0,6/9/20
+2020,2015-F3,Treated,16,0,0,0,0,6/11/20
+2020,2015-F4,Treated,17,0,0,0,0,6/9/20
+2020,2015-F5,Treated,18,0,0,0,0,6/9/20
+2020,2015-F7,Treated,19,1,0,0,1,6/10/20
+2020,2015-F20,Treated,20,0,0,0,0,6/11/20
+2020,2015-F12,Treated,21,2,1,1,0,6/10/20
+2020,2015-S3,Treated,22,2,2,0,0,6/8/20
+2020,2015-F12,Treated,23,0,0,0,0,6/10/20
+2020,2016-2,Treated,24,1,1,0,0,6/10/20
+2020,2016-2,Treated,25,1,1,0,0,6/10/20
+2020,2015-S3,Treated,26,1,1,0,0,6/8/20
+2020,2015-S3,Treated,27,0,0,0,0,6/11/20
+2020,2016-6,Treated,28,0,0,0,0,6/11/20
+2020,2016-6,Treated,29,1,0,1,0,6/11/20
+2020,2016-6,Treated,30,0,0,0,0,6/11/20
+2017,,Untreated aspen,1,0,0,0,0,6/15/17
+2017,,Untreated aspen,2,1,1,0,0,6/7/17
+2017,,Untreated aspen,3,0,0,0,0,6/8/17
+2017,,Untreated aspen,4,0,0,0,0,6/8/17
+2017,,Untreated aspen,5,0,0,0,0,6/13/17
+2017,,Untreated aspen,6,0,0,0,0,6/8/17
+2017,,Untreated aspen,7,0,0,0,0,6/9/17
+2017,,Untreated aspen,8,0,0,0,0,6/13/17
+2017,,Untreated aspen,9,0,0,0,0,6/7/17
+2017,,Untreated aspen,13,0,0,0,0,6/15/17
+2017,,Untreated aspen,14,0,0,0,0,6/7/17
+2017,,Untreated aspen,15,0,0,0,0,6/8/17
+2017,,Untreated aspen,16,1,1,0,0,6/8/17
+2017,,Untreated aspen,17,0,0,0,0,6/13/17
+2017,,Untreated aspen,18,0,0,0,0,6/8/17
+2017,,Untreated aspen,19,0,0,0,0,6/9/17
+2017,,Untreated aspen,20,0,0,0,0,6/13/17
+2017,,Untreated aspen,21,0,0,0,0,6/7/17
+2018,,Untreated aspen,1,1,1,0,0,6/26/18
+2018,,Untreated aspen,2,0,0,0,0,5/4/18
+2018,,Untreated aspen,3,0,0,0,0,5/7/18
+2018,,Untreated aspen,4,0,0,0,0,5/7/18
+2018,,Untreated aspen,5,0,0,0,0,5/11/18
+2018,,Untreated aspen,6,0,0,0,0,6/25/18
+2018,,Untreated aspen,7,0,0,0,0,6/7/18
+2018,,Untreated aspen,8,0,0,0,0,6/26/18
+2018,,Untreated aspen,9,0,0,0,0,5/2/18
+2018,,Untreated aspen,10,0,0,0,0,6/26/18
+2018,,Untreated aspen,11,0,0,0,0,5/4/18
+2018,,Untreated aspen,12,0,0,0,0,5/7/18
+2018,,Untreated aspen,13,2,2,0,0,6/26/18
+2018,,Untreated aspen,14,0,0,0,0,5/4/18
+2018,,Untreated aspen,15,0,0,0,0,5/7/18
+2018,,Untreated aspen,16,1,1,0,0,6/25/18
+2018,,Untreated aspen,17,0,0,0,0,5/11/18
+2018,,Untreated aspen,18,0,0,0,0,6/25/18
+2018,,Untreated aspen,19,0,0,0,0,6/7/18
+2018,,Untreated aspen,20,0,0,0,0,6/26/18
+2018,,Untreated aspen,21,0,0,0,0,5/2/18
+2018,,Untreated aspen,22,0,0,0,0,6/25/18
+2018,,Untreated aspen,23,0,0,0,0,5/11/18
+2018,,Untreated aspen,24,0,0,0,0,6/25/18
+2018,,Untreated aspen,25,0,0,0,0,6/7/18
+2018,,Untreated aspen,26,0,0,0,0,6/26/18
+2018,,Untreated aspen,27,1,1,0,0,5/2/18
+2019,,Untreated aspen,1,0,0,0,0,5/8/19
+2019,,Untreated aspen,2,0,0,0,0,5/6/19
+2019,,Untreated aspen,3,1,1,0,0,5/8/19
+2019,,Untreated aspen,4,0,0,0,0,5/8/19
+2019,,Untreated aspen,5,0,0,0,0,5/6/19
+2019,,Untreated aspen,6,0,0,0,0,5/8/19
+2019,,Untreated aspen,7,0,0,0,0,5/6/19
+2019,,Untreated aspen,8,0,0,0,0,5/7/19
+2019,,Untreated aspen,9,0,0,0,0,5/7/19
+2019,,Untreated aspen,10,0,0,0,0,5/8/19
+2019,,Untreated aspen,11,0,0,0,0,5/6/19
+2019,,Untreated aspen,12,0,0,0,0,5/8/19
+2019,,Untreated aspen,13,1,1,0,0,5/8/19
+2019,,Untreated aspen,14,1,0,1,0,5/6/19
+2019,,Untreated aspen,15,0,0,0,0,5/8/19
+2019,,Untreated aspen,16,1,1,0,0,5/8/19
+2019,,Untreated aspen,17,0,0,0,0,5/6/19
+2019,,Untreated aspen,18,0,0,0,0,5/8/19
+2019,,Untreated aspen,19,1,1,0,0,5/6/19
+2019,,Untreated aspen,20,1,1,0,0,5/7/19
+2019,,Untreated aspen,21,0,0,0,0,5/7/19
+2019,,Untreated aspen,22,0,0,0,0,5/8/19
+2019,,Untreated aspen,23,0,0,0,0,5/6/19
+2019,,Untreated aspen,24,0,0,0,0,5/8/19
+2019,,Untreated aspen,25,1,1,0,0,5/6/19
+2019,,Untreated aspen,26,0,0,0,0,5/7/19
+2019,,Untreated aspen,27,0,0,0,0,5/7/19
+2020,,Untreated aspen,1,0,0,0,0,6/9/20
+2020,,Untreated aspen,2,0,0,0,0,6/9/20
+2020,,Untreated aspen,3,0,0,0,0,6/10/20
+2020,,Untreated aspen,4,0,0,0,0,6/10/20
+2020,,Untreated aspen,5,0,0,0,0,6/11/20
+2020,,Untreated aspen,6,0,0,0,0,6/11/20
+2020,,Untreated aspen,7,0,0,0,0,6/10/20
+2020,,Untreated aspen,8,0,0,0,0,6/10/20
+2020,,Untreated aspen,9,1,1,0,0,6/12/20
+2020,,Untreated aspen,10,0,0,0,0,6/9/20
+2020,,Untreated aspen,11,0,0,0,0,6/9/20
+2020,,Untreated aspen,12,1,0,0,1,6/10/20
+2020,,Untreated aspen,13,0,0,0,0,6/9/20
+2020,,Untreated aspen,14,0,0,0,0,6/9/20
+2020,,Untreated aspen,15,1,0,0,1,6/10/20
+2020,,Untreated aspen,16,0,0,0,0,6/11/20
+2020,,Untreated aspen,17,0,0,0,0,6/11/20
+2020,,Untreated aspen,18,0,0,0,0,6/11/20
+2020,,Untreated aspen,19,3,2,1,0,6/10/20
+2020,,Untreated aspen,20,2,2,0,0,6/10/20
+2020,,Untreated aspen,21,0,0,0,0,6/12/20
+2020,,Untreated aspen,22,0,0,0,0,6/11/20
+2020,,Untreated aspen,23,0,0,0,0,6/11/20
+2020,,Untreated aspen,24,0,0,0,0,6/11/20
+2020,,Untreated aspen,25,1,0,1,0,6/10/20
+2020,,Untreated aspen,26,1,0,1,0,6/10/20
+2020,,Untreated aspen,27,0,0,0,0,6/12/20
+2017,,Untreated spruce,1,0,0,0,0,6/16/17
+2017,,Untreated spruce,2,0,0,0,0,6/1/17
+2017,,Untreated spruce,3,0,0,0,0,6/8/17
+2017,,Untreated spruce,4,0,0,0,0,6/12/17
+2017,,Untreated spruce,5,0,0,0,0,6/12/17
+2017,,Untreated spruce,6,0,0,0,0,6/8/17
+2017,,Untreated spruce,7,1,1,0,0,6/1/17
+2017,,Untreated spruce,8,1,1,0,0,6/1/17
+2017,,Untreated spruce,9,1,1,0,0,6/16/17
+2017,,Untreated spruce,17,0,0,0,0,6/16/17
+2017,,Untreated spruce,18,0,0,0,0,6/16/17
+2017,,Untreated spruce,19,1,1,0,0,6/6/17
+2017,,Untreated spruce,20,0,0,0,0,6/12/17
+2017,,Untreated spruce,21,0,0,0,0,6/12/17
+2017,,Untreated spruce,22,0,0,0,0,6/8/17
+2017,,Untreated spruce,23,2,2,0,0,6/1/17
+2017,,Untreated spruce,24,1,1,0,0,6/1/17
+2017,,Untreated spruce,25,0,0,0,0,6/16/17
+2018,,Untreated spruce,1,0,0,0,0,6/22/18
+2018,,Untreated spruce,2,0,0,0,0,6/22/18
+2018,,Untreated spruce,3,0,0,0,0,5/7/18
+2018,,Untreated spruce,4,0,0,0,0,5/11/18
+2018,,Untreated spruce,5,,0,0,0,
+2018,,Untreated spruce,6,0,0,0,0,5/7/18
+2018,,Untreated spruce,7,0,0,0,0,6/22/18
+2018,,Untreated spruce,8,0,0,0,0,6/22/18
+2018,,Untreated spruce,9,0,0,0,0,6/22/18
+2018,,Untreated spruce,10,0,0,0,0,6/22/18
+2018,,Untreated spruce,11,0,0,0,0,6/26/18
+2018,,Untreated spruce,12,1,1,0,0,5/7/18
+2018,,Untreated spruce,13,0,0,0,0,5/11/18
+2018,,Untreated spruce,14,0,0,0,0,5/10/18
+2018,,Untreated spruce,15,0,0,0,0,5/7/18
+2018,,Untreated spruce,16,0,0,0,0,6/22/18
+2018,,Untreated spruce,17,0,0,0,0,6/22/18
+2018,,Untreated spruce,18,1,1,0,0,6/26/18
+2018,,Untreated spruce,19,1,1,0,0,5/7/18
+2018,,Untreated spruce,20,0,0,0,0,5/11/18
+2018,,Untreated spruce,21,0,0,0,0,5/10/18
+2018,,Untreated spruce,22,0,0,0,0,5/7/18
+2018,,Untreated spruce,23,0,0,0,0,6/22/18
+2018,,Untreated spruce,24,0,0,0,0,6/22/18
+2018,,Untreated spruce,25,1,1,0,0,6/22/18
+2018,,Untreated spruce,26,0,0,0,0,6/22/18
+2018,,Untreated spruce,27,1,1,0,0,6/22/18
+2019,,Untreated spruce,1,0,0,0,0,5/7/19
+2019,,Untreated spruce,2,1,1,0,0,5/8/19
+2019,,Untreated spruce,3,0,0,0,0,5/8/19
+2019,,Untreated spruce,4,0,0,0,0,5/7/19
+2019,,Untreated spruce,5,0,0,0,0,5/7/19
+2019,,Untreated spruce,6,0,0,0,0,5/8/19
+2019,,Untreated spruce,7,0,0,0,0,5/7/19
+2019,,Untreated spruce,8,0,0,0,0,5/7/19
+2019,,Untreated spruce,9,0,0,0,0,5/7/19
+2019,,Untreated spruce,10,0,0,0,0,5/7/19
+2019,,Untreated spruce,11,1,0,1,0,5/8/19
+2019,,Untreated spruce,12,0,0,0,0,5/8/19
+2019,,Untreated spruce,13,1,1,0,0,5/7/19
+2019,,Untreated spruce,14,0,0,0,0,5/7/19
+2019,,Untreated spruce,15,0,0,0,0,5/8/19
+2019,,Untreated spruce,16,1,1,0,0,5/7/19
+2019,,Untreated spruce,17,0,0,0,0,5/7/19
+2019,,Untreated spruce,18,1,0,0,1,5/8/19
+2019,,Untreated spruce,19,1,1,0,0,5/8/19
+2019,,Untreated spruce,20,1,1,0,0,5/7/19
+2019,,Untreated spruce,21,0,0,0,0,5/7/19
+2019,,Untreated spruce,22,0,0,0,0,5/8/19
+2019,,Untreated spruce,23,0,0,0,0,5/7/19
+2019,,Untreated spruce,24,0,0,0,0,5/7/19
+2019,,Untreated spruce,25,1,0,1,0,5/7/19
+2019,,Untreated spruce,26,0,0,0,0,5/7/19
+2019,,Untreated spruce,27,1,1,0,0,5/7/19
+2020,,Untreated spruce,1,0,0,0,0,6/9/20
+2020,,Untreated spruce,2,0,0,0,0,6/11/20
+2020,,Untreated spruce,3,0,0,0,0,6/10/20
+2020,,Untreated spruce,4,1,0,1,0,6/11/20
+2020,,Untreated spruce,5,1,1,0,0,6/12/20
+2020,,Untreated spruce,6,,0,0,0,
+2020,,Untreated spruce,7,0,0,0,0,6/9/20
+2020,,Untreated spruce,8,0,0,0,0,6/9/20
+2020,,Untreated spruce,9,0,0,0,0,6/9/20
+2020,,Untreated spruce,10,0,0,0,0,7/14/20
+2020,,Untreated spruce,11,1,1,0,0,6/11/20
+2020,,Untreated spruce,12,0,0,0,0,6/10/20
+2020,,Untreated spruce,13,0,0,0,0,6/11/20
+2020,,Untreated spruce,14,1,1,0,0,6/12/20
+2020,,Untreated spruce,15,0,0,0,0,6/10/20
+2020,,Untreated spruce,16,1,1,0,0,6/9/20
+2020,,Untreated spruce,17,0,0,0,0,7/14/20
+2020,,Untreated spruce,18,2,2,0,0,6/11/20
+2020,,Untreated spruce,19,0,0,0,0,6/10/20
+2020,,Untreated spruce,20,2,2,0,0,6/11/20
+2020,,Untreated spruce,21,0,0,0,0,6/12/20
+2020,,Untreated spruce,22,0,0,0,0,6/10/20
+2020,,Untreated spruce,23,0,0,0,0,6/9/20
+2020,,Untreated spruce,24,1,1,0,0,6/9/20
+2020,,Untreated spruce,25,4,4,0,0,6/9/20
+2020,,Untreated spruce,26,1,1,0,0,6/9/20
+2020,,Untreated spruce,27,1,1,0,0,6/9/20
+2021,2015-F9,Treated,1,0,0,0,0,5/4/21
+2021,2015-F18,Treated,2,0,0,0,0,5/4/21
+2021,2015-F3,Treated,3,2,2,0,0,5/6/21
+2021,2015-F4,Treated,4,1,0,1,0,5/6/21
+2021,2015-F5,Treated,5,0,0,0,0,5/5/21
+2021,2015-F7,Treated,6,2,2,0,0,5/5/21
+2021,2015-F10,Treated,7,0,0,0,0,5/6/21
+2021,2015-F12,Treated,8,0,0,0,0,5/4/21
+2021,2015-S3,Treated,9,0,0,0,0,5/4/21
+2021,2015-F9,Treated,10,1,1,0,0,5/4/21
+2021,2015-F18,Treated,11,0,0,0,0,5/4/21
+2021,2015-F3,Treated,12,2,2,0,0,5/6/21
+2021,2015-F7,Treated,13,3,2,1,0,5/5/21
+2021,2015-F9,Treated,14,0,0,0,0,5/4/21
+2021,2015-F18,Treated,15,0,0,0,0,5/4/21
+2021,2015-F3,Treated,16,0,0,0,0,5/6/21
+2021,2015-F4,Treated,17,1,1,0,0,5/6/21
+2021,2015-F5,Treated,18,0,0,0,0,5/5/21
+2021,2015-F7,Treated,19,0,0,0,0,5/5/21
+2021,2015-F20,Treated,20,0,0,0,0,5/6/21
+2021,2015-F12,Treated,21,0,0,0,0,5/4/21
+2021,2015-S3,Treated,22,0,0,0,0,5/4/21
+2021,2015-F12,Treated,23,0,0,0,0,5/4/21
+2021,2016-2,Treated,24,3,3,0,0,5/5/21
+2021,2016-2,Treated,25,2,1,1,0,5/5/21
+2021,2015-S3,Treated,26,0,0,0,0,5/4/21
+2021,2015-S3,Treated,27,0,0,0,0,5/4/21
+2021,2016-6,Treated,28,1,1,0,0,5/4/21
+2021,2016-6,Treated,29,0,0,0,0,5/4/21
+2021,2016-6,Treated,30,0,0,0,0,5/4/21
+2021,,Untreated spruce,1,0,0,0,0,5/5/21
+2021,,Untreated spruce,2,2,2,0,0,5/6/21
+2021,,Untreated spruce,3,0,0,0,0,5/5/21
+2021,,Untreated spruce,4,0,0,0,0,5/6/21
+2021,,Untreated spruce,5,1,1,0,0,5/6/21
+2021,,Untreated spruce,6,1,1,0,0,5/5/21
+2021,,Untreated spruce,7,0,0,0,0,5/6/21
+2021,,Untreated spruce,8,0,0,0,0,5/6/21
+2021,,Untreated spruce,9,1,1,0,0,5/5/21
+2021,,Untreated spruce,10,0,0,0,0,5/5/21
+2021,,Untreated spruce,11,0,0,0,0,5/6/21
+2021,,Untreated spruce,12,1,1,0,0,5/5/21
+2021,,Untreated spruce,13,0,0,0,0,5/6/21
+2021,,Untreated spruce,14,0,0,0,0,5/6/21
+2021,,Untreated spruce,15,0,0,0,0,5/5/21
+2021,,Untreated spruce,16,0,0,0,0,5/6/21
+2021,,Untreated spruce,17,0,0,0,0,5/5/21
+2021,,Untreated spruce,18,0,0,0,0,5/6/21
+2021,,Untreated spruce,19,0,0,0,0,5/5/21
+2021,,Untreated spruce,20,0,0,0,0,5/6/21
+2021,,Untreated spruce,21,0,0,0,0,5/6/21
+2021,,Untreated spruce,22,0,0,0,0,5/5/21
+2021,,Untreated spruce,23,0,0,0,0,5/6/21
+2021,,Untreated spruce,24,0,0,0,0,5/6/21
+2021,,Untreated spruce,25,2,2,0,0,5/5/21
+2021,,Untreated spruce,26,0,0,0,0,5/6/21
+2021,,Untreated spruce,27,0,0,0,0,5/5/21
+2021,,Untreated aspen,1,0,0,0,0,5/4/21
+2021,,Untreated aspen,2,0,0,0,0,5/5/21
+2021,,Untreated aspen,3,0,0,0,0,5/5/21
+2021,,Untreated aspen,4,1,1,0,0,5/5/21
+2021,,Untreated aspen,5,0,0,0,0,5/6/21
+2021,,Untreated aspen,6,0,0,0,0,5/5/21
+2021,,Untreated aspen,7,0,0,0,0,5/4/21
+2021,,Untreated aspen,8,0,0,0,0,5/6/21
+2021,,Untreated aspen,9,0,0,0,0,5/5/21
+2021,,Untreated aspen,10,0,0,0,0,5/4/21
+2021,,Untreated aspen,11,0,0,0,0,5/4/21
+2021,,Untreated aspen,12,0,0,0,0,5/5/21
+2021,,Untreated aspen,13,0,0,0,0,5/4/21
+2021,,Untreated aspen,14,0,0,0,0,5/5/21
+2021,,Untreated aspen,15,0,0,0,0,5/5/21
+2021,,Untreated aspen,16,0,0,0,0,5/5/21
+2021,,Untreated aspen,17,0,0,0,0,5/6/21
+2021,,Untreated aspen,18,0,0,0,0,5/5/21
+2021,,Untreated aspen,19,1,1,0,0,5/4/21
+2021,,Untreated aspen,20,0,0,0,0,5/6/21
+2021,,Untreated aspen,21,2,1,1,0,5/5/21
+2021,,Untreated aspen,22,0,0,0,0,5/5/21
+2021,,Untreated aspen,23,0,0,0,0,5/6/21
+2021,,Untreated aspen,24,2,2,0,0,5/5/21
+2021,,Untreated aspen,25,0,0,0,0,5/4/21
+2021,,Untreated aspen,26,0,0,0,0,5/6/21
+2021,,Untreated aspen,27,0,0,0,0,5/5/21
