@@ -3,7 +3,7 @@
 library(here)
 library(tidyverse)
 library(pwr)
-library(agricolae)
+library(pwr2)
 
 ### Power and t-tests ###
 
@@ -66,3 +66,38 @@ pwr.anova.test(k = 3, n = 5, sig.level = 0.05, power = 0.8)
 # Sample size required for significant difference with medium average effect size between all groups
 f <- 0.5
 pwr.anova.test(k = 3, f = 0.5, sig.level = 0.05, power = 0.8)
+
+### Power on 2-way ANOVA ###
+# pwr.2way function from the pwr2 package
+
+# Data from lecture 
+Lect8 <- read.csv(here("data", "Lect08 data.csv"), header = TRUE)
+
+## count observations by groups
+n.nit <- Lect8 %>% group_by(nitrogentreat) %>%
+                   summarize(n())
+
+n.fungi <- Lect8 %>% group_by(fungitreat) %>%
+                     summarize(n())
+
+## number of groups
+k.nit <- length(unique(Lect8$nitrogentreat))
+k.fun <- length(unique(Lect8$fungitreat))
+
+## Effect sizes
+mod2.aov <- aov(NBI ~ nitrogentreat*fungitreat, data = Lect8)
+mod2.aovtab <- anova(mod2.aov)
+
+# eta^2 = SSeffect/(SSeffect + SSerror)
+SS.nit <- mod2.aovtab$"Sum Sq"[1]
+SS.fungi <- mod2.aovtab$"Sum Sq"[2]
+SS.error <- mod2.aovtab$"Sum Sq"[4]
+  
+nit.etasq <- SS.nit/(SS.nit + SS.error)
+fun.etasq <- SS.fungi/(SS.fungi + SS.error)
+  
+# f = sqrt(eta^2/(1 - eta^2))
+f.nit <- sqrt(nit.etasq/(1 - nit.etasq))
+f.fungi <- sqrt(fun.etasq/(1 - fun.etasq))
+
+pwr.2way(a = k.nit, b = k.fun, alpha = 0.05, size.A = 20, size.B = 20, f.A = f.nit, f.B = f.fungi)
