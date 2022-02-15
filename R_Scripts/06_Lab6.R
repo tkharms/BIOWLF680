@@ -26,6 +26,8 @@ sdt <- sqrt(mean(sd(fox$fox)^2, sd(fox$no.fox)^2))
 
 power.t.test(n = 25, delta = 8.345515, sd = sdt, sig.level = 0.05, type = "two.sample", alternative = "two.sided")
 
+# Power of performed 2-sample t-test, unequal variances
+# power_t_test function from the MESS package
 power_t_test(n = 25, delta = 8.345515, sd = sdt, sig.level = 0.05, sd.ratio = 25, type = "two.sample", alternative = "two.sided")
 
 # Sample size needed to detect a significant difference
