@@ -3,6 +3,7 @@
 library(here)
 library(tidyverse)
 library(pwr)
+library(agricolae)
 
 ### Power and t-tests ###
 
