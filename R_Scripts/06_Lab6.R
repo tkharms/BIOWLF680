@@ -4,6 +4,7 @@ library(here)
 library(tidyverse)
 library(pwr)
 library(pwr2)
+library(MESS)
 
 ### Power and t-tests ###
 
@@ -24,6 +25,8 @@ t.test(fox$no.fox, fox$fox, var.equal = TRUE)
 sdt <- sqrt(mean(sd(fox$fox)^2, sd(fox$no.fox)^2))
 
 power.t.test(n = 25, delta = 8.345515, sd = sdt, sig.level = 0.05, type = "two.sample", alternative = "two.sided")
+
+power_t_test(n = 25, delta = 8.345515, sig.level = 0.05, sd.ratio = 25, type = "two.sample", alternative = "two.sided")
 
 # Sample size needed to detect a significant difference
 power.t.test(delta = 8.3, sd = sdt, sig.level = 0.05, power = 0.8, type = "two.sample", alternative = "two.sided")
