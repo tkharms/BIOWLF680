@@ -93,22 +93,12 @@ aictab(list(randint = randint, randintsl = randintsl, rand.uncorr = rand.uncorr)
 r.squaredGLMM(randint)
 
 ## Comparing models with and without random intercepts
-# Two options: 
-# 1) fit gls model (no random effect) and refit all random effects models in nlme
-# 2) Fit lm (no random effect) and refit all random effects models using lmer with ML (maximum likelihood), rather than REML (restricted maximum likelihood)
+# fit gls model (no random effect) and refit all random effects models in nlme
 
-# 1) Fit gls (from nlme) and refit models using nlme. Note syntax for fitting random effects using nlme
 mod.gls <- gls(Richness ~ NAP, data = RIKZ)
 mod.int.nlme <- lme(Richness ~ NAP, random = ~1|fBeach, data = RIKZ)
 
 anova(mod.gls, mod.int.nlme)
-
-# 2) Fit lm and compare to lmer fit with ML
-mod.lm <- lm(Richness ~ NAP, data = RIKZ)
-mod.int.ML <- lmer(Richness ~ NAP + (1|fBeach), REML = FALSE, data = RIKZ)
-
-AIC(mod.lm)
-AIC(mod.int.ML)
 
 ## Plot the fitted model ##
 # Lots of options here. See ggeffects package
