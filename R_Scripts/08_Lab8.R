@@ -33,6 +33,9 @@ qqline(resid(randint))
 
 summary(randint)
 
+# Bootstrap confidence intervals
+confint(randint, method = "boot") 
+
 # Check assumptions on random effects
 qqnorm(ranef(randint)$fBeach[[1]])
 plot(ranef(randint)$fBeach[[1]])
@@ -118,3 +121,4 @@ preds.rand.int <- ggpredict(mod.int,
                         type = "random")
 plot(preds.rand.int)
 
+### add CI on confidence interval
