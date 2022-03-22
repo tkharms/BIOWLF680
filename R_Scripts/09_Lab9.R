@@ -37,3 +37,7 @@ qqline(squid.varfix) # This won't work.
 # If you want to visualize the 1:1 line on a qqnorm, specify the type of residuals
 qqnorm(resid(squid.varfix, type = "pearson"))
 qqline(resid(squid.varfix, type = "pearson"))
+
+### Confidence intervals on parameters ###
+# The intervals function uses a normal approximation to generate 95% confidence intervals on parameters
+intervals(squid.gls)
