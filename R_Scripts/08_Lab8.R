@@ -94,6 +94,7 @@ aictab(list(randint = randint, randintsl = randintsl, rand.uncorr = rand.uncorr)
 #R2m: marginal R2, variance explained by fixed factors only
 #R2c: conditional R2, variance explained by fixed+random factors
 r.squaredGLMM(randint)
+r2.randint <- r.squaredGLMM(randint)
 
 ## Comparing models with and without random intercepts
 # fit gls model (no random effect) and refit all random effects models in nlme
@@ -107,8 +108,22 @@ anova(mod.gls, mod.int.nlme)
 # Lots of options here. See ggeffects package
 
 # Fixed effects
-preds <- ggpredict(randint, type = "fixed")
-plot(preds)
+# Note: Can specify more than one term in the terms argument (if we had more than one fixed effect...as in CO2 model)
+preds <- ggpredict(randint, terms = c("NAP"), type = "fixed")
+pl.randint <- plot(preds, add.data = TRUE) +
+  annotate("text", x = 1.75, y = 21, size = 6, label = paste("R[m]^{2}~'='~", round(r2.randint[1], 2)), parse = TRUE) +
+  annotate("text", x = 1.75, y = 19, size = 6, label = paste("R[m]^{2}~'='~", round(r2.randint[2], 2)), parse = TRUE) +
+  ylab("Richness") +
+  xlab("NAP") +
+  theme_bw() +
+  theme(plot.title = element_blank(),
+        legend.title = element_blank(),
+        axis.text = element_text(size = 20),
+        axis.title = element_text(size = 20),
+        legend.position = c(0.15, 0.9),
+        legend.text = element_text(size = 16),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
 
 # Random effects
 preds.rand <- ggpredict(randint, terms = c("NAP", "fBeach [sample=9]"), type = "random")
