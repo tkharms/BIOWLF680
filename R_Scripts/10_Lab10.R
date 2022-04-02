@@ -1,7 +1,10 @@
 ### Lecture 16: Logistic regression ###
 
+library(here)
+library(arm)
+
 ## Read in data ##
-Boar <- read.delim(here("data", "Lect16dat.txt"))
+Boar <- read.delim(here::here("data", "Lect16dat.txt"))
 names(Boar)<-c("TB", "sex", "age", "lengthCT")
 
 ## Plot raw data
@@ -19,6 +22,30 @@ confint(mod.log)
 # Odds (model coefficients & CI)
 exp(cbind(OR = coef(mod.log), confint(mod.log)))
 # Interpretation: For 1 unit increase in body length, the odds of TB infection increase by a factor of 1.03
+
+## Probabilities ##
+## Probability of infection at mean length
+# Note coef[1] = intercept, coef[2] = effect of length
+# invlogit function from arm package: function(x) {1/(1+exp(-x))}
+# invlogit is equivalent to plogis
+invlogit(coef(mod.log)[1] + coef(mod.log)[2]*mean(Boar$lengthCT, na.rm = TRUE))
+plogis(coef(mod.log)[1] + coef(mod.log)[2]*mean(Boar$lengthCT, na.rm = TRUE))
+
+## Evaluate difference in probability of TB given a one unit change in length, near the mean length. 
+# Remember that the logistic fit is not linear in terms of probabilities, so it matters where we evaluate the fitted function. Here, we choose to evaluate near the mean of the predictor- this is where change in probability of infection is steepest.
+# Probability of infection at mean(length)
+p.mean <- plogis(coef(mod.log)[1] + coef(mod.log)[2]*mean(Boar$lengthCT, na.rm = TRUE))
+
+# Probability of infection at mean(length) + 1
+p.mean1 <- plogis(coef(mod.log)[1] + coef(mod.log)[2]*(mean(Boar$lengthCT, na.rm = TRUE) + 1))
+
+# Difference
+p.mean1 - p.mean
+
+## "Divide by 4 rule ##
+# slope/4 is maximum difference in Pr(y=1) for a 1 unit change in x
+coef(mod.log)[2]/4
+# Estimate is similar to the difference method. For a 1 unit change in x, probability of TB infection increases by no more than 0.8%
 
 ## Pseudo R2 ##
 # One of many flavors of pseudo R2 metrics
