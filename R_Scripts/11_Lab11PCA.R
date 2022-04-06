@@ -10,7 +10,7 @@ library(factoextra)
 library(corrplot)
 
 ## Norge lakes data ##
-lakes <- read.csv(here("data", "Lect18_lakes.csv"))
+lakes <- read.csv(here::here("data", "Lect18_lakes.csv"))
 
 pairs(~Wshedarea + Annl.Precip + Temprange + MAT + Runoff + NDVI + Slope + Elevation + pctForest  + pctBog + pctLake + pctAg + NO3 + DOC +  Ndep + pctLake.1, data = lakes)  
 
@@ -55,9 +55,8 @@ corrplot(contrib, is.corr = FALSE)
 # Arrow length = percentage of total variation explained by the variable
 # Arrow angle = factor loadings on components 1 & 2
 ggbiplot(lakesPCA2)
-
-
-
+ggbiplot(lakesPCA2, choices = 2:3)
+ggbiplot(lakesPCA2, choices = c(1,3))
 
 ## Regression with PCs as predictors ##
 
