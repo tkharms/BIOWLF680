@@ -4,6 +4,7 @@ library(rstan)
 library(here)
 library(gdata)
 library(bayesplot)
+library(brms)
 
 ### Test model ###
 ## run this set of commands to check that Stan and RStan have properly installed and to understand the structure of a Stan model
@@ -159,8 +160,8 @@ parameters {
 }
 
 model {
- alpha ~ normal(0, 10); 
- beta ~ normal(0, 10);
+ alpha ~ normal(0, 10); // Prior on intercept
+ beta ~ normal(0, 10); // Prior on slope
  y ~ normal(alpha + x * beta , sigma); // likelihood
 }
 
@@ -173,7 +174,7 @@ curve(dnorm(x, mean = 0, sd = 10), xlim = c(-30,30))
 fit.norm <- stan(model_code = seamod_norm, data = sea_data, warmup = 500, iter = 10000, chains = 4, cores = 2, thin = 1)
 
 # Visualize MCMC chains. Look for complete mixing.
-traceplot(fit)
+traceplot(fit.norm)
 
 ## BIOL 680 students: Try setting a stronger prior on one or both parameters. ##
 
@@ -199,3 +200,80 @@ abline(mean(post2$alpha), mean(post2$beta), col = 7, lw = 2)
 
 # Add lm fit
 abline(mod.lm, col = 2, lty = 2, lw = 3)
+
+### Hierarchical model ###
+## Fit model with normal (but still diffuse) priors ##
+seamod_norm <- "
+data {
+ int < lower = 0 > N; // Sample size
+ vector[N] x; // Predictor
+ vector[N] y; // Response
+}
+
+parameters {
+ real alpha; // Intercept
+ real beta; // Slope (regression coefficient)
+ real < lower = 0 > sigma; // Error scale constrained to greater than 0
+}
+
+model {
+ alpha ~ normal(0, 10); // Prior on intercept
+ beta ~ normal(0, 10); // Prior on slope
+ y ~ normal(alpha + x * beta , sigma); // likelihood
+}
+
+generated quantities {
+} // The posterior predictive distribution"
+
+## !!Always plot the priors before proceeding!! ##
+curve(dnorm(x, mean = 0, sd = 10), xlim = c(-30,30))
+
+fit.norm <- stan(model_code = seamod_norm, data = sea_data, warmup = 500, iter = 10000, chains = 4, cores = 2, thin = 1)
+
+# Visualize MCMC chains. Look for complete mixing.
+traceplot(fit.norm)
+
+### GLM example using brms ###
+## Plant species richness at Toolik
+## Data
+dat <- read.csv(here::here("data", "toolik_richness.csv"))
+
+rich.pl <- dat %>% filter(Treatment == "CT") %>%
+                      ggplot(aes(x = Year, y = Richness, color = as.factor(Block))) +
+                        geom_point()
+
+## Check automated priors
+get_prior(Richness ~ I(Year-2007), family = 'poisson', data = dat)
+pp_check(rich.df)
+
+## Fit model using default priors
+rich.df <- brm(bf(Richness ~ I(Year-2007),
+                        family = brmsfamily('poisson')), data = dat,
+                     iter = 1000,
+                     chains = 4, cores = 4)
+
+## Extract annotated Stan code
+# This helps you gain understanding of Stan syntax. brms can handle many common model structures, but you will need to use Stan for more complex models.
+stancode(rich.df)
+
+## Check posteriors
+summary(rich.df)
+plot(rich.df)
+
+## Try a normal prior on the intercept. This is slightly more constrained than the uniform prior applied previously.
+pr1 <- prior(normal(0, 1), class = "b")
+
+# Refit model with updated prior
+rich.df.norm <- brm(bf(Richness ~ I(Year-2007),
+                  family = brmsfamily('poisson')), 
+                prior = pr1,
+                data = dat,
+               iter = 1000,
+               chains = 4, cores = 4)
+
+# Check prior
+pp_check(rich.df.norm)
+
+## Check posteriors
+summary(rich.df.norm)
+plot(rich.df.norm)
