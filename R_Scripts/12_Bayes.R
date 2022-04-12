@@ -245,3 +245,9 @@ pp_check(rich.df.norm)
 ## Check posteriors
 summary(rich.df.norm)
 plot(rich.df.norm)
+
+## Plot fitted model
+plot(conditional_effects(rich.df.norm), points = TRUE)
+
+## Bayesian R2
+bayes_R2(rich.df.norm)
