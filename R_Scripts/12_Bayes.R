@@ -124,7 +124,7 @@ model {
 generated quantities {
 } // The posterior predictive distribution"
 
-fit <- stan(model_code = seamod, data = sea_data, warmup = 500, iter = 10000, chains = 4, cores = 2, thin = 1)
+fit <- stan(model_code = seamod, data = sea_data, warmup = 500, iter = 10000, chains = 4, cores = 4, thin = 1)
 
 
 # Visualize MCMC chains. Look for complete mixing.
@@ -200,38 +200,6 @@ abline(mean(post2$alpha), mean(post2$beta), col = 7, lw = 2)
 
 # Add lm fit
 abline(mod.lm, col = 2, lty = 2, lw = 3)
-
-### Hierarchical model ###
-## Fit model with normal (but still diffuse) priors ##
-seamod_norm <- "
-data {
- int < lower = 0 > N; // Sample size
- vector[N] x; // Predictor
- vector[N] y; // Response
-}
-
-parameters {
- real alpha; // Intercept
- real beta; // Slope (regression coefficient)
- real < lower = 0 > sigma; // Error scale constrained to greater than 0
-}
-
-model {
- alpha ~ normal(0, 10); // Prior on intercept
- beta ~ normal(0, 10); // Prior on slope
- y ~ normal(alpha + x * beta , sigma); // likelihood
-}
-
-generated quantities {
-} // The posterior predictive distribution"
-
-## !!Always plot the priors before proceeding!! ##
-curve(dnorm(x, mean = 0, sd = 10), xlim = c(-30,30))
-
-fit.norm <- stan(model_code = seamod_norm, data = sea_data, warmup = 500, iter = 10000, chains = 4, cores = 2, thin = 1)
-
-# Visualize MCMC chains. Look for complete mixing.
-traceplot(fit.norm)
 
 ### GLM example using brms ###
 ## Plant species richness at Toolik
