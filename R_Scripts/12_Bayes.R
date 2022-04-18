@@ -215,7 +215,7 @@ get_prior(Richness ~ I(Year-2007), family = 'poisson', data = dat)
 pp_check(rich.df)
 
 ## Fit model using default priors
-rich.df <- brm(bf(Richness ~ I(Year-2007),
+rich.df <- brm(bf(Richness ~ I(Year-2007) + (1|Region),
                         family = brmsfamily('poisson')), data = dat,
                      iter = 1000,
                      chains = 4, cores = 4)
@@ -230,6 +230,9 @@ plot(rich.df)
 
 ## Try a normal prior on the intercept. This is slightly more constrained than the uniform prior applied previously.
 pr1 <- prior(normal(0, 1), class = "b")
+
+curve(dnorm(x, 0, 1), xlim = c(-10, 10))
+curve(5*log(0.5*x))
 
 # Refit model with updated prior
 rich.df.norm <- brm(bf(Richness ~ I(Year-2007),
