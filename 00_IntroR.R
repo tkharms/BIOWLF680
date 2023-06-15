@@ -5,6 +5,14 @@
 library(tidyverse)
 library(here)
 
+## Resources:
+## Github training:
+# https://nceas.github.io/training-git-intro/getting-started-with-git-rstudio.html
+
+## Intro to R:
+# https://datacarpentry.org/R-ecology-lesson/01-intro-to-r.html
+# https://datacarpentry.org/R-ecology-lesson/
+
 ## Tips:
 # ??function name: calls documentation
 
