@@ -136,6 +136,11 @@ co2 <- ts(data=CO2$ppm, frequency=12,
 par(mfrow=c(1,1))
 plot.ts(co2, ylab=expression(paste("CO"[2], " (ppm)")))
 
+## Decomposition of trend, seasonal, and residual variation
+co2.decomp <- decompose(co2)
+
+plot(co2.decomp)
+
 #calculate 2nd difference of the co2 time series (non-linear trend)
 co2.D2 <- diff(co2, differences=2)
 
