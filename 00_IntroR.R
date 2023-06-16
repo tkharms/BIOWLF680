@@ -77,7 +77,7 @@ ggplot(dat, aes(x = species, y = length_mm)) +
   ylab("length (mm)") +
   theme_bw() +
   theme(panel.grid = element_blank(),
-        panel.border = element_rect(color = "black", linewidth = 2),
+        panel.border = element_rect(color = "red", linewidth = 2),
         axis.text = element_text(size = 24),
         axis.title.x = element_blank(),
         axis.title.y = element_text(size = 24),
